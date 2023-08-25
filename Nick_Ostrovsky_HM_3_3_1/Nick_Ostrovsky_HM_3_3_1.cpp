@@ -1,4 +1,4 @@
-// Nick_Ostrovsky_HM_3_3_1.cpp : This file contains the 'main' function. Program execution begins and ends there.
+﻿// Nick_Ostrovsky_HM_3_3_1.cpp : This file contains the 'main' function. Program execution begins and ends there.
 //
 
 #include <iostream>
@@ -22,11 +22,31 @@ public:
     }
     double get_num1() { return num1; }
     double get_num2() { return num2; }
+    double add()
+    {
+        return (num2 + num1);
+    }
     double multiply()
     {
         return (num1 * num2);
     }
-    
+    double substruct_1_2()
+    {
+        return (num1 - num2);
+    }
+    double substruct_2_1()
+    {
+        return (num2 - num1);
+    }
+    double divide_1_2()
+    {
+        return (num1 / num2);
+    }
+    double divide_2_1()
+    {
+        return (num2 / num1);
+    }
+
 };
 int main()
 {
@@ -39,11 +59,14 @@ int main()
     Abaqus calc;
     a = calc.set_num1(n);
     b = calc.set_num2(m);
-    
-    if ((a) && (b))
+    // если задаю условие через переменные 
+    if ((calc.set_num1(n)) && calc.set_num2(m))
     {
-        
-        std::cout << calc.multiply() << std::endl;
+        std::cout << "\n num1 + num2 =" << calc.add() << std::endl;
+        std::cout <<"\n num1 * num2 =" << calc.multiply() << std::endl;
+        std::cout << "\n num1 - num2 =" << calc.substruct_1_2() << std::endl;
+        std::cout << "\n num2 - num1 =" << calc.substruct_2_1() << std::endl;
+        std::cout << "\n num2 / num1 =" << calc.divide_2_1() << std::endl;
     }
     else 
     {
